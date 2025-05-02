@@ -10,11 +10,13 @@ from rest_framework.routers import DefaultRouter
 from core.views import UserViewSet
 from core.views.acessorio import AcessorioViewSet
 from core.views.cor import CorViewSet
+from core.views.modelo import ModeloViewSet
 
 router = DefaultRouter()
 
 router.register(r'acessorios', AcessorioViewSet, basename='acessorios')
 router.register(r'cores', CorViewSet, basename='cores')
+router.register(r'modelos', ModeloViewSet, basename='modelos')
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 
 urlpatterns = [
